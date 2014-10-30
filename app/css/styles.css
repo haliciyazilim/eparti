@@ -1,0 +1,85 @@
+html {
+    /*overflow-y: scroll;*/
+    overflow-x: hidden;
+}
+.margin-top {
+    margin-top: 20px !important;
+}
+.header {
+    height: 80px;
+}
+.header-logo {
+    display: block;
+    height: 80px;
+}
+.subject-list-item {
+    margin-top: 20px;
+}
+
+.subject-list-item a {
+    color: #d2322d;
+}
+.subject-detail {
+    margin-bottom: 60px;
+}
+.subject-detail p {
+    font-size: 18px;
+}
+.entry-list-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #efefef;
+}
+
+.entry-list-item .action-buttons {
+    visibility: hidden;
+}
+.entry-list-item:hover {
+    background-color: #fffff9;
+}
+.entry-list-item:hover .action-buttons {
+    visibility: visible;
+}
+
+.entry-list-item .author {
+    /*font-size: smaller;*/
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+.show-create-subject-modal {
+    color: #00b3ee;
+}
+.show-create-subject-modal:hover {
+    color: #3276b1;
+}
+
+.create-subject-choice {
+    position: relative;;
+}
+.create-subject-choice-remove {
+    position: absolute;
+    right: 20px;
+    height: 34px;
+}
+.create-subject-choice-input {
+    padding-right: 20px;
+}
+
+.form-header {
+    min-height: 35px;
+    line-height: 30px;
+    text-align: right;
+    /*font-size: larger;*/
+}
+
+.entry-comment-item {
+    font-size: smaller;
+}
+
+/*.entry-comment-input {*/
+    /*display: none;*/
+/*}*/

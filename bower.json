@@ -1,0 +1,22 @@
+{
+  "name": "eparti-forum",
+  "description": "E-Parti",
+  "version": "0.0.1b",
+  "private": true,
+  "dependencies": {
+    "angular": "",
+    "angular-mocks": "",
+    "jquery": "",
+    "angular-bootstrap":"",
+    "angular-route": "",
+    "angular-resource": "",
+    "angular-animate": "",
+    "normalize.css": "",
+    "jquery.serializeJSON":"",
+    "angular-ui-utils":"",
+    "bootstrap3-wysihtml5-bower":""
+  },
+  "install" : {
+    "path" : "app/js-bower"
+  }
+}

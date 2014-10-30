@@ -1,0 +1,18 @@
+<div ng-repeat="subject in subjects" class="subject-list-item row">
+  <a ng-href="#/subjects/{{subject.id}}">
+    <div class="col-lg-12 title">
+      <span class="badge">{{subject.type}}</span>
+      {{subject.title}}
+    </div>
+  </a>
+</div>
+<div class="margin-top row">
+  <div class="col-lg-12">
+    <button class="btn btn-default btn-block show-create-subject-modal" ng-click="showCreateSubjectModal()">
+      <span class="glyphicon glyphicon-plus"></span>
+      Konu Aç
+    </button>
+  </div>
+</div>
+
+<div ng-include="'/html/modules/create_subject_modal.html'"></div>
