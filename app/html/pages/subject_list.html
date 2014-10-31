@@ -1,7 +1,15 @@
+<div class="row">
+  <div class="col-lg-12">
+    <a class="eparti-logo" ng-href="#/">
+      <img src="https://www.eparti.org/assets/eparti_logo-9e5ce99539866e6516e204b7eb93f083.png" class="img-responsive">
+    </a>
+  </div>
+</div>
 <div ng-repeat="subject in subjects" class="subject-list-item row">
   <a ng-href="#/subjects/{{subject.id}}">
     <div class="col-lg-12 title">
-      <span class="badge">{{subject.type}}</span>
+      <span ng-if="subject.type == 'poll'" class="badge">Anket</span>
+      <span ng-if="subject.type == 'proposal'" class="badge">Öneri</span>
       {{subject.title}}
     </div>
   </a>

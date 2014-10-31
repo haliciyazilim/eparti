@@ -1,6 +1,10 @@
 html {
-    /*overflow-y: scroll;*/
+    overflow-y: scroll;
     overflow-x: hidden;
+}
+#view {
+    min-height: 700px;
+    height: auto;
 }
 .margin-top {
     margin-top: 20px !important;
@@ -12,6 +16,11 @@ html {
     display: block;
     height: 80px;
 }
+
+.subject-list {
+    position: relative;
+    top: -70px !important;
+}
 .subject-list-item {
     margin-top: 20px;
 }
@@ -19,8 +28,12 @@ html {
 .subject-list-item a {
     color: #d2322d;
 }
+
+.eparti-logo img{
+    max-height: 150px;
+}
 .subject-detail {
-    margin-bottom: 60px;
+    padding-bottom: 20px;
 }
 .subject-detail p {
     font-size: 18px;
@@ -33,13 +46,13 @@ html {
     border-top: 1px solid #efefef;
 }
 
-.entry-list-item .action-buttons {
+.entry-list-item .action-buttons, .subject-detail .action-buttons {
     visibility: hidden;
 }
 .entry-list-item:hover {
     background-color: #fffff9;
 }
-.entry-list-item:hover .action-buttons {
+.entry-list-item:hover .action-buttons, .subject-detail:hover .action-buttons  {
     visibility: visible;
 }
 
@@ -80,6 +93,27 @@ html {
     font-size: smaller;
 }
 
-/*.entry-comment-input {*/
-    /*display: none;*/
-/*}*/
+.footer {
+    height: 150px;
+    padding-top: 25px;
+    background-color: #fcfcff;
+}
+.infinite-width {
+    position: relative !important;
+    /*padding: 0;*/
+}
+.infinite-width:before, .infinite-width:after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 9999px;   /* some huge width */
+}
+.infinite-width:before {
+    right: 100%;
+}
+.infinite-width:after {
+    left: 100%;
+}

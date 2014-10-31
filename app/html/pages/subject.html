@@ -8,7 +8,7 @@
       {{subject.author}}
     </h4>
   </div>
-  <div ng-if="subject.type == 'POLL'" class="col-lg-12 margin-top">
+  <div ng-if="subject.type == 'poll'" class="col-lg-12 margin-top">
     <div class="list-group">
       <button class="text-left btn-default btn-block list-group-item" ng-repeat="q in subject.questions track by $index">
         <span class="badge">{{($index+1) *77}}</span>
@@ -17,7 +17,8 @@
       </button>
     </div>
   </div>
-  <div ng-if="subject.type == 'SUGGEST'" class="row">
+
+  <div ng-if="subject.type == 'proposal'" class="row">
     <div class="col-lg-2 col-lg-offset-1">
       <button class="btn btn-success">
         <span class="glyphicon glyphicon-ok"></span>
@@ -44,6 +45,60 @@
       </div>
     </div>
   </div>
+  <div class="action-buttons row text-center">
+    <div class="col-lg-2 col-lg-offset-1">
+      <button class="btn btn-success">
+        <span class="glyphicon glyphicon-heart"></span>
+        Beğen | {{subject.likeCount}}
+      </button>
+    </div>
+    <div class="col-lg-2">
+      <button class="btn btn-info">
+        <span class="glyphicon glyphicon-share"></span>
+        Paylaş
+      </button>
+    </div>
+    <!--<div class="col-lg-2">-->
+      <!--<button ng-class="{'active':entry.shouldShowCommentInput}" class="btn btn-default " ng-init="entry.shouldShowCommentInput = false"-->
+              <!--ng-click="entry.shouldShowCommentInput = !entry.shouldShowCommentInput ">-->
+        <!--<span class="glyphicon glyphicon-comment"></span>-->
+        <!--Yorum Yap-->
+      <!--</button>-->
+    <!--</div>-->
+    <div class="col-lg-2">
+      <button class="btn btn-warning">
+        <span class="glyphicon glyphicon-arrow-down"></span>
+        Düşür | {{subject.dislikeCount}}
+      </button>
+    </div>
+    <div class="col-lg-2">
+      <button class="btn btn-danger">
+        <span class="glyphicon glyphicon-flag"></span>
+        Şikayet et
+      </button>
+    </div>
+  </div>
 </div>
 
-<div class="entry-list row"  ng-repeat="entry in entries" ng-include="'html/modules/entry-list-item.html'"></div>
+<div class="row ">
+  <div class="col-lg-3 col-lg-offset-9">
+    <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#add-content-modal">
+      <span class="glyphicon glyphicon-plus"></span>
+      İçerik ekle
+    </button>
+  </div>
+</div>
+
+
+<div class="entry-list row margin-top"  ng-repeat="entry in entries" ng-include="'html/modules/entry-list-item.html'"></div>
+
+
+<div ng-if="entries.length > 0" class="row margin-top">
+  <div class="col-lg-10 col-lg-offset-1">
+    <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#add-content-modal">
+      <span class="glyphicon glyphicon-plus"></span>
+      İçerik ekle
+    </button>
+  </div>
+</div>
+<div ng-include="'html/modules/add_content_modal.html'"></div>

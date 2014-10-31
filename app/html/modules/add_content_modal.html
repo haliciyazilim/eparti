@@ -1,0 +1,32 @@
+<div class="modal fade" id="add-content-modal" ng-controller="addContentController">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">İçerik Ekle</h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-lg-12 form-group">
+            <textarea id="content-rich-text" rows="5" class="form-control" placeholder="Konu ile alakalı içeriğinizi buraya yazınız. Lütfen eParti kurallarına uygun, hakaret ve küfür kullanmadan içerik giriniz."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span>
+        </button>
+        <!--<button type="button" class="btn btn-warning" ng-click="resetFormSubject()">-->
+          <!--<span class="glyphicon glyphicon-refresh"></span>-->
+        <!--</button>-->
+        <button id="create-subject-button" type="button" class="btn btn-success"
+                ng-click="createSubject()"
+                data-loading-text="Ekleniyor" autocomplete="off">
+          <span class="glyphicon glyphicon-floppy-disk"></span>
+          Ekle
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

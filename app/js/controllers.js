@@ -54,3 +54,5 @@ epartiApp
   .controller('headerController', function ($scope) {
 
   })
+  .controller('addContentController', function ($scope) {
+  })
