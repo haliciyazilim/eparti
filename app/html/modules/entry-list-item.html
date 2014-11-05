@@ -13,32 +13,33 @@
   </div>
   <div class="action-buttons row text-center">
     <div class="col-lg-2 col-lg-offset-1">
-      <button class="btn btn-success">
+      <button class="btn btn-block btn-success">
         <span class="glyphicon glyphicon-heart"></span>
         Beğen | {{entry.likeCount}}
       </button>
     </div>
     <div class="col-lg-2">
-      <button class="btn btn-info">
+      <button class="btn btn-block btn-info">
         <span class="glyphicon glyphicon-share"></span>
         Paylaş
       </button>
     </div>
     <div class="col-lg-2">
-      <button ng-class="{'active':entry.shouldShowCommentInput}" class="btn btn-default " ng-init="entry.shouldShowCommentInput = false"
+      <button ng-class="{'active':entry.shouldShowCommentInput}" class="btn btn-block btn-default"
+              ng-init="entry.shouldShowCommentInput = false"
               ng-click="entry.shouldShowCommentInput = !entry.shouldShowCommentInput ">
         <span class="glyphicon glyphicon-comment"></span>
         Yorum Yap
       </button>
     </div>
     <div class="col-lg-2">
-      <button class="btn btn-warning">
+      <button class="btn btn-block btn-warning">
         <span class="glyphicon glyphicon-arrow-down"></span>
         Düşür | {{entry.dislikeCount}}
       </button>
     </div>
     <div class="col-lg-2">
-      <button class="btn btn-danger">
+      <button class="btn btn-block btn-danger">
         <span class="glyphicon glyphicon-flag"></span>
         Şikayet et
       </button>
